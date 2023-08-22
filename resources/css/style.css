@@ -1,0 +1,175 @@
+:root {
+  --text-medium: 1.6rem;
+  --gc-1: oklch(87% 0.2 93);
+  --gc-2: oklch(63% 0.29 332);
+  --gc-3: oklch(51% 0.285 265);
+  --accent-gradient: linear-gradient(
+    to right,
+    var(--gc-1),
+    var(--gc-2),
+    var(--gc-3)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1.5rem;
+}
+nav a {
+  font-size: var(--text-medium);
+  text-decoration: none;
+  color: black;
+  padding: 3rem 0;
+}
+nav a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: right;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+header .hero {
+  color: transparent;
+  background-size: 300%;
+  animation: gradientRotate 4s infinite forwards alternate;
+  background-image: var(--accent-gradient);
+  background-clip: text;
+}
+header .hero__name {
+  font-family: "League Spartan", Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 11rem;
+}
+header .hero__name span :not(.word) {
+  display: inline-block;
+  animation: popUp 1s both;
+  animation-delay: calc(0.05s * var(--i));
+}
+header .hero__title {
+  font-size: 2.4rem;
+  text-align: right;
+  line-height: 3.5rem;
+  animation: popUp 1s both;
+  animation-delay: calc(0.05s * var(--i));
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 8rem 0;
+}
+.projects .project {
+  max-width: 50rem;
+  justify-self: center;
+}
+.projects .project__image {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.4s ease-out;
+  box-shadow: 0.1rem 0.1rem 1rem lightgrey;
+  position: relative;
+  z-index: 1;
+}
+.projects .project__title {
+  font-size: 1.8rem;
+  padding: 1.2rem 0;
+}
+.projects .project__description {
+  font-size: var(--text-medium);
+  line-height: 1.4;
+}
+.projects .project:hover .project__image {
+  transform: scale(1.02) translate(calc(var(--mouse-x) * -0.5rem), calc(-1.5rem + var(--mouse-y) * -0.5rem)) perspective(150px) rotateX(calc(var(--mouse-y) * -1deg)) rotateY(calc(var(--mouse-x) * 1deg));
+  box-shadow: 0.1rem 0.1rem 2rem lightgrey;
+}
+.projects .project__full-info {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px black solid;
+  font-size: var(--text-medium);
+  margin-bottom: 4rem;
+}
+footer .links {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+footer .links a {
+  text-decoration: none;
+  color: black;
+  padding: 2rem;
+}
+footer .links a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: right;
+}
+footer .links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 80% 20%;
+  }
+  100% {
+    background-position: 20% 80%;
+  }
+}
+@keyframes popUp {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

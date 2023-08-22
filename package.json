@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "'Portfolio website'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass resources/sass/main.scss resources/css/style.css",
+    "watch:sass": "sass --watch resources/sass/main.scss resources/css/style.css"
+  },
+  "author": "'Ben Thompson'",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.65.1"
+  }
+}
