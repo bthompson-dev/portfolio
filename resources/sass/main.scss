@@ -83,16 +83,19 @@ header {
     animation: gradientRotate 4s infinite forwards alternate;
     background-image: var(--accent-gradient);
     background-clip: text;
+    -webkit-background-clip: text;
 
     &__name {
       font-family: "League Spartan", Helvetica, sans-serif;
       font-weight: 900;
       font-size: 11rem;
 
-      span :not(.word) {
-        display: inline-block;
-        animation: popUp 1s both;
-        animation-delay: calc(0.05s * var(--i));
+      &--word {
+        span {
+          display: inline-block;
+          animation: popUp 0.75s both;
+          animation-delay: calc(0.08s * var(--i));
+        }
       }
     }
 
@@ -100,8 +103,8 @@ header {
       font-size: 2.4rem;
       text-align: right;
       line-height: 3.5rem;
-      animation: popUp 1s both;
-      animation-delay: calc(0.05s * var(--i));
+      animation: popUp 0.75s both;
+      animation-delay: calc(0.08s * var(--i));
     }
   }
 }
@@ -109,20 +112,20 @@ header {
 // Projects
 
 .projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  justify-content: space-evenly;
   margin: 8rem 0;
+  flex-wrap: wrap;
 
   .project {
     max-width: 50rem;
-    justify-self: center;
+    transition: height 2s ease-out;
 
     &__image {
       object-fit: contain;
       width: 100%;
       border-radius: 8px;
-      transition: all 0.4s ease-out;
+      transition: transform 0.4s ease-out;
       box-shadow: 0.1rem 0.1rem 1rem lightgrey;
       position: relative;
       z-index: 1;
@@ -151,10 +154,50 @@ header {
       }
     }
 
-    &__full-info {
+    &__full-info,
+    &__close {
       display: none;
     }
+  }
 
+  .project.selected {
+    max-width: 100%;
+    height: 80vh;
+    order: -1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .project__image {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .project__full-info {
+      display: block;
+    }
+
+    &:hover {
+      .project__image {
+        transform: none;
+        box-shadow: 0.1rem 0.1rem 1rem lightgrey;
+      }
+    }
+
+    .project__close {
+      display: block;
+      color: lightgrey;
+      font-size: 6rem;
+      position: absolute;
+      top: -4rem;
+      right: 8rem;
+      transition: all 0.5s;
+
+      &:hover {
+        color: grey;
+        cursor: pointer;
+      }
+    }
   }
 }
 
