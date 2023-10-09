@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./resources/css/style.css" />
+    <link rel="stylesheet" href="./resources/css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -16,59 +16,175 @@
     />
     <script src="./index.js" defer></script>
     <title>Ben Thompson - Full Stack Developer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/favicon/site.webmanifest">
   </head>
 
   <body>
     <nav>
       <a href="#projects">Projects</a>
-      <a href="">About</a>
+      <a href="/about.html">About</a>
     </nav>
 
     <header>
       <div class="hero">
         <h1 class="hero__name">
           <span class="hero__name--word">
-            <span style="--i:0">B</span><span style="--i:1">e</span><span style="--i:2">n</span>
+            <span style="--i: 0">B</span><span style="--i: 1">e</span
+            ><span style="--i: 2">n</span>
           </span>
           <span class="hero__name--word">
-            <span style="--i:3">T</span><span style="--i:4">h</span
-              ><span style="--i:5">o</span><span style="--i:6">m</span><span style="--i:7">p</span><span style="--i:8">s</span><span style="--i:9">o</span
-              ><span style="--i:10">n</span>
+            <span style="--i: 3">T</span><span style="--i: 4">h</span
+            ><span style="--i: 5">o</span><span style="--i: 6">m</span
+            ><span style="--i: 7">p</span><span style="--i: 8">s</span
+            ><span style="--i: 9">o</span><span style="--i: 10">n</span>
           </span>
-          
         </h1>
-        <p class="hero__title" style="--i:11">fullstack web developer</p>
+        <p class="hero__title" style="--i: 11">fullstack web developer</p>
       </div>
     </header>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="project">
         <span class="project__close">&times;</span>
-          <img
-            src="./resources/img/taoty_screenshot.png"
-            alt="Tutoring website"
-            class="project__image"
-          />
+        <img
+          src="./resources/img/taoty_screenshot.png"
+          alt="Tutoring website"
+          class="project__image"
+        />
         <h3 class="project__title">Album of the Year Website</h3>
         <p class="project__description">
-          Fullstack project connected to a database, using React & MongoDB to
-          show a list of albums sorted by year & genre
+          Fullstack project, built with the MERN stack, which shows users a list
+          of selected albums filtered by year & genre
         </p>
 
         <div class="project__full-info">
-          <p class="project__full-info--tech">
-          Technologies: React, MongoDB, HTML, CSS, Javascript
-          </p>  
+          <div class="project__full-info--description">
+            <p>
+              At the end of every year, I like to put together a list of my
+              favourite albums.
+            </p>
 
-          <p class="project__full-info--description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, nulla recusandae earum maiores deleniti labore dignissimos odit sapiente perferendis nobis?
-          </p>
+            <p>
+              So I had the idea to put this online, as a visual record of all
+              the albums I’d enjoyed over the years. I also wanted it to be
+              possible to filter the albums by year, genre, and if they had been
+              selected as the ‘winner’ of that year.
+            </p>
 
-          <p class="project__full-info--links">
-            Links:
-          </p>
+            <p>
+              It seemed like an ideal opportunity to use React, as I could then
+              dynamically generate the list of albums depending on the filters
+              selected by the user. On the backend, I used an Express router
+              with NodeJS, and connected the site to a MongoDB database stored
+              on MongoDB Atlas.
+            </p>
+
+            <p>
+              I still have plans to develop the site further, as I think there’s
+              lots of potential extra functionality that could be added!
+            </p>
+          </div>
+
+          <div class="project__full-info--tech">
+            Built with:
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/react_logo.svg"
+                alt="React"
+                class="technology__logo"
+              />
+              React
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/node-js_logo.svg"
+                alt="NodeJS"
+                class="technology__logo"
+              />
+              NodeJS
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/expressjs_logo.svg"
+                alt="Express"
+                class="technology__logo"
+              />
+              Express
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/mongoDB_logo.svg"
+                alt="MongoDB"
+                class="technology__logo"
+              />
+              MongoDB
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/html_logo.svg"
+                alt="HTML"
+                class="technology__logo"
+              />
+              HTML
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/css_logo.svg"
+                alt="CSS"
+                class="technology__logo"
+              />
+              CSS
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/sass_logo.svg"
+                alt="SASS"
+                class="technology__logo"
+              />
+              SASS
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/javascript_logo.svg"
+                alt="JavaScript"
+                class="technology__logo"
+              />
+              JavaScript
+            </div>
+          </div>
+
+          <div class="project__full-info--links">
+            <div class="project-link">
+              <a href="https://taoty.co.uk/" target="_blank">
+                <img
+                  class="project-link__icon"
+                  src="./resources/img/link-icon.svg"
+                  alt="Link Icon"
+                /><span class="project-link__text">Live website</span>
+              </a>
+            </div>
+            <div class="project-link">
+              <a href="https://github.com/bthompson-dev/taoty/" target="_blank">
+                <img
+                  src="./resources/img/logos/github_logo.svg"
+                  alt="GitHub Icon"
+                  class="project-link__icon"
+                /><span class="project-link__text">Source code</span></a
+              >
+            </div>
+          </div>
         </div>
-
       </div>
 
       <div class="project">
@@ -81,18 +197,93 @@
         <h3 class="project__title">Tutoring Website</h3>
         <p class="project__description">
           Personal website to advertise tutoring business, created with HTML,
-          CSS & Javascript
+          CSS & JavaScript
         </p>
+
+        <div class="project__full-info">
+          <div class="project__full-info--description">
+              <p>
+                My first website, made to advertise my business as a tutor of English and Maths.
+              </p>
+              <p>
+                This was one of the inspirations in teaching myself to code, as I knew a personal website would be beneficial. 
+              I decided to make it from scratch with HTML, CSS & JavaScript, and learnt a lot along the way!
+              </p>
+            <p>Fully responsive for mobile layouts and optimized for SEO.</p>          
+          </div>
+
+          <div class="project__full-info--tech">
+            Built with:
+
+
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/html_logo.svg"
+                alt="HTML"
+                class="technology__logo"
+              />
+              HTML
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/css_logo.svg"
+                alt="CSS"
+                class="technology__logo"
+              />
+              CSS
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/javascript_logo.svg"
+                alt="JavaScript"
+                class="technology__logo"
+              />
+              JavaScript
+            </div>
+          </div>
+
+          <div class="project__full-info--links">
+            <div class="project-link">
+              <a href="https://benthompsontutoring.co.uk" target="_blank">
+                <img
+                  class="project-link__icon"
+                  src="./resources/img/link-icon.svg"
+                  alt="Link Icon"
+                /><span class="project-link__text">Live website</span>
+              </a>
+            </div>
+            <div class="project-link">
+              <a href="" target="_blank">
+                <img
+                  src="./resources/img/logos/github_logo.svg"
+                  alt="GitHub Icon"
+                  class="project-link__icon"
+                /><span class="project-link__text">Source code</span></a
+              >
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
+      </div>
+
+      
+
+
     </section>
 
     <footer>
-      <div class="links">
-        <a href="https://github.com/bthompson-dev"> GitHub </a>
-        <a href=""> LinkedIn </a>
-        <a href=""> CV </a>
-      </div>
-      <p>&copy; Ben Thompson 2023</p>
+        <div class="links">
+          <div class="links__link"><a href="https://github.com/bthompson-dev"> GitHub </a></div>
+          <div class="links__link"><a href="https://www.linkedin.com/in/benthompson-dev"> LinkedIn </a></div>
+          <div class="links__link"><a href=""> CV </a></div>
+        </div>
+      <p class="copyright">&copy; Ben Thompson 2023</p>
     </footer>
   </body>
 </html>

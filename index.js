@@ -1,3 +1,5 @@
+// Project manipulation
+
 const projects = document.getElementsByClassName("project");
 
 Array.from(projects).forEach((project) => {
