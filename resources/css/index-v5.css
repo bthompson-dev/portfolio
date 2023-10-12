@@ -240,6 +240,7 @@ header .hero::after {
 }
 .projects .project.selected .project__full-info--description p {
   padding: 0.5rem 0;
+  line-height: 1.5;
 }
 .projects .project.selected .project__full-info--tech {
   display: flex;
