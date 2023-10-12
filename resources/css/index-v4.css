@@ -321,6 +321,9 @@ header .hero::after {
 }
 
 @media screen and (max-width: 56.25em) {
+  .projects .project {
+    padding-bottom: 10vh;
+  }
   .projects .project.selected {
     max-width: 100%;
   }
@@ -334,9 +337,6 @@ header .hero::after {
   }
 }
 @media screen and (max-width: 34.5em) {
-  .projects .project.selected {
-    padding-bottom: 10vh;
-  }
   .projects .project.selected .project__close {
     right: -3rem;
   }

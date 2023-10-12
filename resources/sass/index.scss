@@ -264,6 +264,11 @@ header {
 @media screen and (max-width: 56.25em) {
   // 900px
   .projects {
+
+    .project {
+      padding-bottom: 10vh;
+    }
+
     .project.selected {
       max-width: 100%;
     }
@@ -273,6 +278,7 @@ header {
 @media screen and (max-width: 43.75em) {
   // 700px
   .projects {
+
     .project.selected {
       order: initial;
       .project__image {
@@ -285,8 +291,8 @@ header {
 @media screen and (max-width: 34.5em) {
   // 552px
   .projects {
+
     .project.selected {
-      padding-bottom: 10vh;
       .project__close {
         right: -3rem;
       }
