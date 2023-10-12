@@ -95,6 +95,14 @@
       html {
         font-size: 58%;
       }
+
+      body {
+        width: 85%
+      }
+
+      :root {
+        --text-medium: 1.8rem;
+      }
   }
 
   @media screen and (max-width: 59em) { // 944px

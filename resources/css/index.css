@@ -79,6 +79,12 @@ footer .copyright {
   html {
     font-size: 58%;
   }
+  body {
+    width: 85%;
+  }
+  :root {
+    --text-medium: 1.8rem;
+  }
 }
 @media screen and (max-width: 59em) {
   footer .links {
@@ -163,7 +169,7 @@ header .hero::after {
 }
 @media screen and (max-width: 28.5em) {
   header .hero__name {
-    font-size: 7rem;
+    font-size: 7.5rem;
   }
 }
 .projects {
@@ -320,8 +326,11 @@ header .hero::after {
   }
 }
 @media screen and (max-width: 43.75em) {
+  .projects .project.selected {
+    order: initial;
+  }
   .projects .project.selected .project__image {
-    width: 85%;
+    width: 95%;
   }
 }
 @media screen and (max-width: 34.5em) {

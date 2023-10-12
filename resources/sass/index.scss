@@ -1,4 +1,4 @@
-@use 'global';
+@use "global";
 
 nav {
   display: flex;
@@ -63,14 +63,16 @@ header {
   }
 }
 
-@media screen and (max-width: 56.25em) { // 900px
+@media screen and (max-width: 56.25em) {
+  // 900px
   .hero__name {
     display: flex;
     flex-direction: column;
   }
 }
 
-@media screen and (max-width: 35em) { // 560 px
+@media screen and (max-width: 35em) {
+  // 560 px
   header {
     .hero__name {
       font-size: 9rem;
@@ -78,14 +80,14 @@ header {
   }
 }
 
-@media screen and (max-width: 28.5em) { // 456px
+@media screen and (max-width: 28.5em) {
+  // 456px
   header {
     .hero__name {
-      font-size: 7rem;
+      font-size: 7.5rem;
     }
   }
 }
-
 
 // Projects
 
@@ -259,7 +261,8 @@ header {
   }
 }
 
-@media screen and (max-width: 56.25em) { // 900px
+@media screen and (max-width: 56.25em) {
+  // 900px
   .projects {
     .project.selected {
       max-width: 100%;
@@ -267,17 +270,20 @@ header {
   }
 }
 
-@media screen and (max-width: 43.75em) { // 700px
+@media screen and (max-width: 43.75em) {
+  // 700px
   .projects {
     .project.selected {
+      order: initial;
       .project__image {
-        width: 85%;
+        width: 95%;
       }
     }
   }
 }
 
-@media screen and (max-width: 34.5em) { // 552px
+@media screen and (max-width: 34.5em) {
+  // 552px
   .projects {
     .project.selected {
       padding-bottom: 10vh;
