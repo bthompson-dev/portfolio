@@ -179,9 +179,9 @@ header .hero::after {
   flex-wrap: wrap;
 }
 .projects .project {
-  max-width: 50rem;
   transition: height 2s ease-out;
   margin: 2rem;
+  width: clamp(30rem, 35vw, 50rem);
 }
 .projects .project__image {
   object-fit: contain;
@@ -211,7 +211,7 @@ header .hero::after {
   display: none;
 }
 .projects .project.selected {
-  max-width: 70%;
+  width: 70%;
   height: auto;
   padding-bottom: 15vh;
   order: -1;
@@ -324,12 +324,8 @@ header .hero::after {
 @media screen and (max-width: 56.25em) {
   .projects .project {
     padding-bottom: 10vh;
+    width: clamp(10rem, 50vh, 50rem);
   }
-  .projects .project.selected {
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 43.75em) {
   .projects .project.selected {
     order: initial;
   }
@@ -338,6 +334,9 @@ header .hero::after {
   }
 }
 @media screen and (max-width: 34.5em) {
+  .projects .project.selected {
+    width: 100%;
+  }
   .projects .project.selected .project__close {
     right: -3rem;
   }

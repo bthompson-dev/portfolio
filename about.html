@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Information about Ben Thompson, and what motivates him as a web developer">
-    <link rel="stylesheet" href="./resources/css/about-v5.css" />
+    <meta
+      name="description"
+      content="Information about Ben Thompson, and what motivates him as a web developer"
+    />
+    <link rel="stylesheet" href="./resources/css/about-v6.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -16,10 +19,24 @@
       rel="stylesheet"
     />
     <title>Ben Thompson - About Me</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/resources/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/resources/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/resources/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/resources/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/resources/favicon/site.webmanifest" />
   </head>
 
   <body>
@@ -72,18 +89,49 @@
           Rosa.
         </p>
       </section>
-      
+
       <section class="images">
-        <img src="./resources/img/me.jpg" alt="Photo of Me" class="images__1">
-        <img src="./resources/img/tennis.jpg" alt="Playing tennis" class="images__2">
-        <img src="./resources/img/rosa.jpg" alt="Rosa" class="images__3">
+        <img
+          srcset="
+            ./resources/img/me-small.jpg  150w,
+            ./resources/img/me-medium.jpg 300w,
+            ./resources/img/me-large.jpg  500w
+          "
+          sizes="(max-width:43.75em) 25vw, (max-width: 56.25em) 22vw, 16vw"
+          src="./resources/img/me-large.jpg"
+          alt="Photo of Me"
+          class="images__1"
+        />
+        <img
+        srcset="
+            ./resources/img/tennis-small.jpg  150w,
+            ./resources/img/tennis-medium.jpg 300w,
+            ./resources/img/tennis-large.jpg  500w
+          "
+          sizes="(max-width:43.75em) 25vw, (max-width: 56.25em) 22vw, 16vw"
+          src="./resources/img/tennis-large.jpg"
+          alt="Playing tennis"
+          class="images__2"
+        />
+        <img 
+        srcset="
+            ./resources/img/rosa-small.jpg  150w,
+            ./resources/img/rosa-medium.jpg 300w,
+            ./resources/img/rosa-large.jpg  500w
+          "
+          sizes="(max-width:43.75em) 25vw, (max-width: 56.25em) 22vw, 16vw"
+          src="./resources/img/rosa-large.jpg" alt="Rosa" class="images__3" />
       </section>
     </main>
 
     <footer>
       <div class="links">
-        <div class="links__link"><a href="https://github.com/bthompson-dev"> GitHub </a></div>
-        <div class="links__link"><a href="https://www.linkedin.com/in/benthompson-dev"> LinkedIn </a></div>
+        <div class="links__link">
+          <a href="https://github.com/bthompson-dev"> GitHub </a>
+        </div>
+        <div class="links__link">
+          <a href="https://www.linkedin.com/in/benthompson-dev"> LinkedIn </a>
+        </div>
         <div class="links__link"><a href=""> CV </a></div>
       </div>
       <p>&copy; Ben Thompson 2023</p>

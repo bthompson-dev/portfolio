@@ -98,9 +98,9 @@ header {
   flex-wrap: wrap;
 
   .project {
-    max-width: 50rem;
     transition: height 2s ease-out;
     margin: 2rem;
+    width: clamp(30rem, 35vw, 50rem);
 
     &__image {
       object-fit: contain;
@@ -144,7 +144,7 @@ header {
   }
 
   .project.selected {
-    max-width: 70%;
+    width: 70%;
     height: auto;
     padding-bottom: 15vh;
     order: -1;
@@ -265,23 +265,14 @@ header {
 @media screen and (max-width: 56.25em) {
   // 900px
   .projects {
-
     .project {
       padding-bottom: 10vh;
+      width: clamp(10rem, 50vh, 50rem);
     }
-
-    .project.selected {
-      max-width: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 43.75em) {
-  // 700px
-  .projects {
 
     .project.selected {
       order: initial;
+
       .project__image {
         width: 95%;
       }
@@ -292,8 +283,8 @@ header {
 @media screen and (max-width: 34.5em) {
   // 552px
   .projects {
-
     .project.selected {
+      width: 100%;
       .project__close {
         right: -3rem;
       }
