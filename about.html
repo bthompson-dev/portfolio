@@ -150,7 +150,10 @@
           <a href="./resources/Ben Thompson CV.pdf" target="_blank"> CV </a>
         </div>
       </div>
-      <p>&copy; Ben Thompson 2023</p>
+      <p>&copy; Ben Thompson <span id="year"></span></p>
+      <script>
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+      </script>
     </footer>
   </body>
 </html>

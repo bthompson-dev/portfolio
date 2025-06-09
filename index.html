@@ -69,6 +69,141 @@
         <span class="project__close">&times;</span>
         <img
           srcset="
+            ./resources/img/sapphic-bison-small.webp   350w,
+            ./resources/img/sapphic-bison-medium.webp  700w,
+            ./resources/img/sapphic-bison-large.webp  1000w
+          "
+          sizes="(max-width: 700px) 72.5vw, 550px"
+          src="./resources/img/sapphic-bison-large.png"
+          alt="Sapphic Bison Internal Platform"
+          class="project__image"
+        />
+        <h2 class="project__title">Sapphic Bison Internal Platform</h2>
+        <p class="project__description">
+          Secure management system to handle blood test orders using Next.js,
+          Prisma & PostgreSQL
+        </p>
+
+        <div class="project__full-info">
+          <div class="project__full-info--description">
+            <p>
+              Together with a team of students at UCL, I built an order
+              management platform for Sapphic Bison, a non-profit organisation
+              providing blood tests for trans people across the UK.
+            </p>
+            <p>
+              The platform was designed to provide easy order tracking and
+              management alongside data analytics, internal notifications, and
+              integration with email and lab APIs.
+            </p>
+            <p>
+              For the frontend, we used Next.js and Material UI
+            </p>
+          </div>
+
+          <div class="project__full-info--tech">
+            Built with:
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/react_logo.svg"
+                alt="React"
+                class="technology__logo"
+              />
+              React
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/node-js_logo.svg"
+                alt="NodeJS"
+                class="technology__logo"
+              />
+              NodeJS
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/expressjs_logo.svg"
+                alt="Express"
+                class="technology__logo"
+              />
+              Express
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/mongoDB_logo.svg"
+                alt="MongoDB"
+                class="technology__logo"
+              />
+              MongoDB
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/html_logo.svg"
+                alt="HTML"
+                class="technology__logo"
+              />
+              HTML
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/css_logo.svg"
+                alt="CSS"
+                class="technology__logo"
+              />
+              CSS
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/sass_logo.svg"
+                alt="SASS"
+                class="technology__logo"
+              />
+              SASS
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/javascript_logo.svg"
+                alt="JavaScript"
+                class="technology__logo"
+              />
+              JavaScript
+            </div>
+          </div>
+
+          <div class="project__full-info--links">
+            <div class="project-link">
+              <a href="https://taoty.co.uk/" target="_blank">
+                <img
+                  class="project-link__icon"
+                  src="./resources/img/link-icon.svg"
+                  alt="Link Icon"
+                /><span class="project-link__text">Live website</span>
+              </a>
+            </div>
+            <div class="project-link">
+              <a href="https://github.com/bthompson-dev/taoty/" target="_blank">
+                <img
+                  src="./resources/img/logos/github_logo.svg"
+                  alt="GitHub Icon"
+                  class="project-link__icon"
+                /><span class="project-link__text">Source code</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <span class="project__close">&times;</span>
+        <img
+          srcset="
             ./resources/img/taoty_screenshot-small.webp   350w,
             ./resources/img/taoty_screenshot-medium.webp  700w,
             ./resources/img/taoty_screenshot-large.webp  1000w
@@ -287,7 +422,10 @@
               </a>
             </div>
             <div class="project-link">
-              <a href="https://github.com/bthompson-dev/benthompsontutoring-public" target="_blank">
+              <a
+                href="https://github.com/bthompson-dev/benthompsontutoring-public"
+                target="_blank"
+              >
                 <img
                   src="./resources/img/logos/github_logo.svg"
                   alt="GitHub Icon"
@@ -303,14 +441,23 @@
     <footer>
       <div class="links">
         <div class="links__link">
-          <a href="https://github.com/bthompson-dev" target="_blank"> GitHub </a>
+          <a href="https://github.com/bthompson-dev" target="_blank">
+            GitHub
+          </a>
         </div>
         <div class="links__link">
-          <a href="https://www.linkedin.com/in/bthompson-dev" target="_blank"> LinkedIn </a>
+          <a href="https://www.linkedin.com/in/bthompson-dev" target="_blank">
+            LinkedIn
+          </a>
         </div>
-        <div class="links__link"><a href="./resources/Ben Thompson CV.pdf" target="_blank"> CV </a></div>
+        <div class="links__link">
+          <a href="./resources/Ben Thompson CV.pdf" target="_blank"> CV </a>
+        </div>
       </div>
-      <p class="copyright">&copy; Ben Thompson 2023</p>
+      <p class="copyright">&copy; Ben Thompson <span id="year"></span></p>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
     </footer>
   </body>
 </html>
