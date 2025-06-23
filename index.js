@@ -30,6 +30,8 @@ Array.from(projects).forEach((project) => {
     image.style.setProperty("--mouse-y", String(yRotation));
   };
 
+  project.addEventListener("mousemove", handleMove);
+
   // Project click: select this, deselect others
   project.addEventListener("click", function (e) {
     // Prevent click on close button from bubbling up
