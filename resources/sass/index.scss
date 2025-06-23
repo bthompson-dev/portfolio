@@ -101,6 +101,7 @@ header {
     transition: height 2s ease-out;
     margin: 2rem;
     width: clamp(30rem, 35vw, 50rem);
+    scroll-margin-top: 5rem;
 
     &__image {
       object-fit: contain;
@@ -110,6 +111,11 @@ header {
       box-shadow: 0.1rem 0.1rem 1rem lightgrey;
       position: relative;
       z-index: 1;
+    }
+
+    &__video {
+      display: none;
+      border-radius: 8px;
     }
 
     &__title {
@@ -153,9 +159,14 @@ header {
     flex-direction: column;
     cursor: default;
 
-    .project__image {
+    .project__image, .project__video {
+      display: block;
       width: 60%;
       margin: 0 auto;
+    }
+
+    .video_replace {
+      display: none;
     }
 
     .project__title {

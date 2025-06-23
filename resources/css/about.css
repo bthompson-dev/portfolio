@@ -1,0 +1,214 @@
+:root {
+  --text-large: 1.9rem;
+  --text-medium: 1.6rem;
+  --text-small: 1.3rem;
+  --gc-1: oklch(87% 0.2 93);
+  --gc-2: oklch(63% 0.29 332);
+  --gc-3: oklch(51% 0.285 265);
+  --accent-gradient: linear-gradient(
+    to right,
+    var(--gc-1),
+    var(--gc-2),
+    var(--gc-3)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px black solid;
+  font-size: var(--text-large);
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .links {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+footer .links__link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .links a {
+  text-decoration: none;
+  color: black;
+  padding: 2rem;
+}
+footer .links a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: right;
+}
+footer .links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+footer .copyright {
+  font-size: var(--text-medium);
+}
+
+@media screen and (max-width: 40em) {
+  html {
+    font-size: 58%;
+  }
+  body {
+    width: 85%;
+  }
+  :root {
+    --text-medium: 1.8rem;
+  }
+}
+@media screen and (max-width: 59em) {
+  footer .links {
+    width: 100%;
+  }
+}
+nav {
+  display: flex;
+  justify-content: start;
+}
+nav .link {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+nav .link img {
+  height: 2.2rem;
+  width: 2.2rem;
+  transition: all 0.25s;
+}
+nav .link__text {
+  font-size: var(--text-large);
+  text-decoration: none;
+  color: black;
+}
+nav .link__text::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: right;
+}
+nav .link__text:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+nav .link:hover img {
+  transform: translateX(-0.25rem);
+}
+
+main {
+  padding: 2rem 0;
+  display: flex;
+}
+main .text {
+  width: 70%;
+  animation: riseUp 0.5s ease-out;
+}
+main .text h1 {
+  font-family: "League Spartan", Helvetica, sans-serif;
+  font-size: 6rem;
+  padding-bottom: 2rem;
+}
+main .text p {
+  font-size: var(--text-medium);
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+main .images {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: end;
+}
+main .images img {
+  width: 65%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1.1;
+  padding-bottom: 1.5rem;
+  opacity: 0;
+}
+main .images__1 {
+  object-position: top;
+  animation: riseUp 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+main .images__2 {
+  animation: riseUp 0.5s ease-out forwards;
+  animation-delay: 0.9s;
+}
+main .images__3 {
+  animation: riseUp 0.5s ease-out forwards;
+  animation-delay: 1.3s;
+}
+
+@media screen and (max-width: 56.25em) {
+  main .images img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 43.75em) {
+  main {
+    flex-wrap: wrap;
+  }
+  main .text {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  main .images {
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  main .images img {
+    width: 25vw;
+    min-width: 15rem;
+  }
+}
+@keyframes riseUp {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

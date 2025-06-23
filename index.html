@@ -7,7 +7,7 @@
       name="description"
       content="Web development portfolio for Ben Thompson, full stack developer based in London"
     />
-    <link rel="stylesheet" href="./resources/css/index-v6.css" />
+    <link rel="stylesheet" href="./resources/css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -76,8 +76,11 @@
           sizes="(max-width: 700px) 72.5vw, 550px"
           src="./resources/img/sapphic-bison-large.png"
           alt="Sapphic Bison Internal Platform"
-          class="project__image"
+          class="project__image video_replace"
         />
+        <video class="project__video" controls>
+          <source src="/resources/video/sapphic_bison_dashboard.mp4">
+        </video>
         <h2 class="project__title">Sapphic Bison Internal Platform</h2>
         <p class="project__description">
           Secure management system to handle blood test orders using Next.js,
@@ -97,12 +100,38 @@
               integration with email and lab APIs.
             </p>
             <p>
-              For the frontend, we used Next.js and Material UI
+              For the frontend, I used Next.js and Material UI to create a full
+              operational dashboard that allows staff members to view and change
+              order details, manage profiles and permissions, generate PDF test
+              results, and visualise order trends.
+            </p>
+            <p>
+              On the backend, I used a PostgreSQL database with Prisma for ORM.
+              Secure authentication and authorisation was implemented using
+              Auth.js.
             </p>
           </div>
 
           <div class="project__full-info--tech">
             Built with:
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/nextjs_logo.svg"
+                alt="Next.js"
+                class="technology__logo"
+              />
+              Next.js
+            </div>
+
+            <div class="technology">
+              <img
+                src="./resources/img/logos/mui_logo.svg"
+                alt="Material UI"
+                class="technology__logo"
+              />
+              Material UI
+            </div>
 
             <div class="technology">
               <img
@@ -115,87 +144,40 @@
 
             <div class="technology">
               <img
-                src="./resources/img/logos/node-js_logo.svg"
-                alt="NodeJS"
+                src="./resources/img/logos/typescript_logo.svg"
+                alt="Typescript"
                 class="technology__logo"
               />
-              NodeJS
+              Typescript
             </div>
 
             <div class="technology">
               <img
-                src="./resources/img/logos/expressjs_logo.svg"
-                alt="Express"
+                src="./resources/img/logos/postgresql_logo.svg"
+                alt="PostgreSQL"
                 class="technology__logo"
               />
-              Express
+              PostgreSQL
+            </div>
+            
+            <div class="technology">
+              <img
+                src="./resources/img/logos/prisma_logo.svg"
+                alt="Prisma"
+                class="technology__logo"
+              />
+              Prisma
             </div>
 
             <div class="technology">
               <img
-                src="./resources/img/logos/mongoDB_logo.svg"
-                alt="MongoDB"
+                src="./resources/img/logos/nextauth.svg"
+                alt="Auth.js"
                 class="technology__logo"
               />
-              MongoDB
+              Auth.js
             </div>
 
-            <div class="technology">
-              <img
-                src="./resources/img/logos/html_logo.svg"
-                alt="HTML"
-                class="technology__logo"
-              />
-              HTML
-            </div>
-
-            <div class="technology">
-              <img
-                src="./resources/img/logos/css_logo.svg"
-                alt="CSS"
-                class="technology__logo"
-              />
-              CSS
-            </div>
-
-            <div class="technology">
-              <img
-                src="./resources/img/logos/sass_logo.svg"
-                alt="SASS"
-                class="technology__logo"
-              />
-              SASS
-            </div>
-
-            <div class="technology">
-              <img
-                src="./resources/img/logos/javascript_logo.svg"
-                alt="JavaScript"
-                class="technology__logo"
-              />
-              JavaScript
-            </div>
-          </div>
-
-          <div class="project__full-info--links">
-            <div class="project-link">
-              <a href="https://taoty.co.uk/" target="_blank">
-                <img
-                  class="project-link__icon"
-                  src="./resources/img/link-icon.svg"
-                  alt="Link Icon"
-                /><span class="project-link__text">Live website</span>
-              </a>
-            </div>
-            <div class="project-link">
-              <a href="https://github.com/bthompson-dev/taoty/" target="_blank">
-                <img
-                  src="./resources/img/logos/github_logo.svg"
-                  alt="GitHub Icon"
-                  class="project-link__icon"
-                /><span class="project-link__text">Source code</span></a
-              >
-            </div>
           </div>
         </div>
       </div>

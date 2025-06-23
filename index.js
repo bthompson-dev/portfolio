@@ -3,8 +3,8 @@
 const projects = document.getElementsByClassName("project");
 
 Array.from(projects).forEach((project) => {
-  const x = project.children[0];
   const image = project.children[1];
+  const closeBtn = project.querySelector(".project__close");
 
   // Function to move images on hover
 
@@ -30,23 +30,19 @@ Array.from(projects).forEach((project) => {
     image.style.setProperty("--mouse-y", String(yRotation));
   };
 
-  // When project is clicked, add selected class and remove click listener
+  // Project click: select this, deselect others
+  project.addEventListener("click", function (e) {
+    // Prevent click on close button from bubbling up
+    if (e.target === closeBtn) return;
 
-  const projectClick = (event) => {
+    Array.from(projects).forEach((p) => p.classList.remove("selected"));
     project.classList.add("selected");
-    project.removeEventListener("click", projectClick);
-  };
+    project.scrollIntoView({ behavior: "instant", block: "start" });
+  });
 
-  // When x is clicked, remove selected class, and re-add click listener after timeout
-
-  const xClick = (event) => {
+  // Close button click: deselect this project
+  closeBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
     project.classList.remove("selected");
-    setTimeout(() => {
-      project.addEventListener("click", projectClick);
-    }, 100);
-  };
-
-  project.addEventListener("mousemove", handleMove);
-  project.addEventListener("click", projectClick);
-  x.addEventListener("click", xClick);
+  });
 });
