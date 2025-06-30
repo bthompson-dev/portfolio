@@ -1,6 +1,6 @@
 :root {
   --text-large: 1.9rem;
-  --text-medium: 1.6rem;
+  --text-medium: 1.7rem;
   --text-small: 1.3rem;
   --gc-1: oklch(87% 0.2 93);
   --gc-2: oklch(63% 0.29 332);
@@ -146,6 +146,38 @@ main .text p {
   font-size: var(--text-medium);
   padding: 1rem 0;
   line-height: 1.5;
+}
+main .text .project-link {
+  display: inline-block;
+  padding-left: 1rem;
+}
+main .text .project-link a {
+  font-size: var(--text-medium);
+  text-decoration: none;
+  color: black;
+}
+main .text .project-link a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: right;
+}
+main .text .project-link a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+main .text .project-link__icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  vertical-align: middle;
+}
+main .text .project-link__text {
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }
 main .images {
   width: 30%;

@@ -7,7 +7,7 @@
       name="description"
       content="Information about Ben Thompson, and what motivates him as a web developer"
     />
-    <link rel="stylesheet" href="./resources/css/about-v6.css" />
+    <link rel="stylesheet" href="./resources/css/about.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -52,49 +52,60 @@
     <main>
       <section class="text">
         <h1>About me</h1>
+        <p>
+          For the past year, I’ve been studying at UCL for an MSc in Computer
+          Science. The course has covered a lot – everything from low-level
+          computer architecture, all the way to software engineering and machine
+          learning. It’s both challenged and inspired me, giving me a greater
+          sense of everything I don’t know, but also the drive to continue
+          learning and solve even harder problems.
+        </p>
 
         <p>
-          I’ve always been interested in the web and how it works. So when I
-          first needed a personal website, I decided to try and put it together
-          myself. How hard could it be…?
+          I first started coding with the simple purpose of building a website
+          for my business. After several weeks of looking up obscure CSS
+          properties and JavaScript methods, I had a working website, and
+          realised I was enjoying myself! From there, I just kept going, trying
+          out new frameworks and technologies to see what I could create.
         </p>
+
         <p>
-          A few months later, after some YouTube tutorials and heavy googling… I
-          had a working website online.
+          That’s one of the things I like about computer science – there’s
+          always more to learn. Over the last year I’ve programmed in Python,
+          TypeScript and C# – but one thing the degree has taught me is that
+          these are just tools. Having spent the time to gain a deeper
+          understanding of the fundamentals, I feel like I can pick up and use
+          anything I might need.
         </p>
+
         <p>
-          The satisfaction of finally figuring it out started me on a journey to
-          learn more and push myself further to see what I could create.
+          For my current project, I’m building a local AI application to use
+          LibreOffice via an MCP server, targeted at using the NPUs on some of
+          the newest Intel laptops. I’m very excited about the potential for AI
+          to transform the tech industry, and it’s a thrill to be testing out
+          cutting-edge AI models and solutions.
         </p>
+
         <p>
-          I’ve always enjoyed challenging myself. That’s one of the things I
-          like about web development – there’s always more to learn. New
-          technologies and approaches, different ways of doing things you
-          haven’t considered.
+          You can check out my progress here:
+          <span class="project-link">
+            <a
+              href="https://github.com/bthompson-dev/LibreOfficeAI"
+              target="_blank"
+            >
+              <img
+                src="./resources/img/logos/github_logo.svg"
+                alt="GitHub Icon"
+                class="project-link__icon"
+              /><span class="project-link__text">LibreOfficeAI</span></a
+            >
+          </span>
         </p>
+
         <p>
-          I’ve worked in a diverse range of roles, from private tutor to
-          professional actor, but the main thing that’s motivated me is finding
-          that challenge in whatever I’m doing.
+          When not coding, I can be found listening to new music, playing
+          tennis, competing in online chess or walking my dog Rosa.
         </p>
-        <p>
-          As a full-stack developer, I’m interested in creating user-friendly,
-          innovative web applications that solve real problems. I enjoy using
-          React, JavaScript, and NodeJS – but am always interested to try out
-          new languages and tech.
-        </p>
-        <p>
-          I’ve recently been accepted to study a Computer Science MSc at UCL in
-          London this September. I’m already preparing by learning Python, and
-          am excited to strengthen my understanding of fundamental concepts in
-          computing.
-        </p>
-        <p>
-          When not coding my latest side-project, I can be found listening to
-          new music, playing tennis, competing in online chess or walking my dog
-          Rosa.
-        </p>
-        <p><b>Currently Reading:</b> Structure and Interpretation of Computer Programs (SICP)</p>
       </section>
 
       <section class="images">
@@ -147,12 +158,12 @@
           </a>
         </div>
         <div class="links__link">
-          <a href="./resources/Ben Thompson CV.pdf" target="_blank"> CV </a>
+          <a href="./resources/CV - Ben Thompson.pdf" target="_blank"> CV </a>
         </div>
       </div>
       <p>&copy; Ben Thompson <span id="year"></span></p>
       <script>
-        document.getElementById('year').innerHTML = new Date().getFullYear();
+        document.getElementById("year").innerHTML = new Date().getFullYear();
       </script>
     </footer>
   </body>
